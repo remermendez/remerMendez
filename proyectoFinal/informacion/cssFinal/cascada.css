@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+}
+
+.header{
+    height: 90%;
+    background-image: linear-gradient(135deg,rgba(199, 199, 199, 0.624) 0%, rgba(58, 58, 58, 0.837) 100%),url(/imgFinal/fondo.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: absolute;
+}
+
+.header__img--important{
+    width: 20%;
+    height: 20%;
+}
+
+.header__img--fondo{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.header__img__item{
+    width: 15%;
+    height: 15%;
+    animation-name: desplazarse;
+    animation-duration: 2s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes desplazarse {
+    0%{
+        transform: skew(0deg);
+    }
+    
+    100%{
+        transform: skew(10deg);
+    }
+}
+
+    .header__nav{
+    display: flex;
+    width: 100%;
+    height: 90%;
+    transition: box-shadow 1s;
+    list-style-type: none;
+}
+
+.header__item{
+    font-size: 18px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+/*header icon*/
+.header__icon{
+    height: 30px;
+    width: 30px;
+    margin: 0 7px 0 0;
+}
+
+.header__a{
+    font-size: 22px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+.menu__cont{
+    z-index: 100;
+}
+
+.menu{
+    display: none;
+}
+
+.header__recurso__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    position: relative;
+    left: 0%;
+    top: 250px;
+}
+
+.header__recurso{
+    height: 25%;
+    background: rgba(255, 255, 255, 0.412);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    transition: background 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header__recurso--modifier{
+    height: 40%;
+    background: rgba(255, 238, 0, 0.425);
+    transition: background 1s;
+
+}
+
+.header__sub__title{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.header__sub__title--modifier{
+    font-weight: 900;
+    color: rgba(248, 58, 0, 0.844);
+}
+
+.yellow{
+    color: rgb(242, 255, 0);
+    font-weight: 900;
+}
+
+.header__sub__parrafo{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.cta{
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+    font-weight: 700;
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0 0 0;
+    margin: auto;
+    transition: transform 0.7s;
+}
+
+.header__item:hover{
+    box-shadow: 3px 3px rgba(255, 255, 255, 0.378);
+}
+
+.header__recurso:hover{
+    background: rgba(255, 255, 255, 0.693);
+}
+
+.header__recurso--modifier:hover{
+    background: rgba(255, 238, 0, 0.699);
+}
+
+.cta:hover{
+    transform:scale(0.97);
+}
+
+@media screen and (max-width:600px) {
+    .header__img__item{
+        width: 25%;
+        height: 25%;
+    } 
+
+    .header__nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #2c3350;
+        position: fixed;
+        left: 100%;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transition: left .5s;
+        border-radius: 10px 0 0px 10px;
+        z-index: 10;
+        overflow-x: auto;
+    }
+
+    .menu{
+        display: block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+    }
+    .header__nav--modifier{
+        left: 0%;
+    }   
+}
+@media screen and (max-width:350px) {
+    .header__sub__title{
+        font-size: 24px;
+    }
+
+    .header__img{
+        width: 33%;
+        height: 33%;
+    }
+
+    .header__icon{
+        width:24px;
+        height: 24px;
+    }
+
+    .header__a{
+        font-size: 16px;
+    }
+
+    .header__img__item{
+        width: 30%;
+        height: 30%;
+    }
+
+    .cta{
+        margin-top: 5px;
+        padding: 2px;
+    }
+
+    .header__recurso,.header__recurso--modifier{
+        padding: 0px;
+    }
+
+    .header__sub__parrafo{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cssFinal/cascada4.css">
+    <link rel="shortcut icon" href="/imgFinal/dinero.png">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <title>ifinancia</title>
+</head>
+<body>
+    <div id="menu"></div>
+    <div class="card__">
+        <div class="card-body">
+            <form id="formulario">
+                <div class="card-header">
+                    <h3 class="card-title">Formulario de gastos</h3>
+                </div>
+                <div class="mb-3">
+                    <label class="ingresos" for="consumos"> Seleccionar </label>
+                    <select class="form-select" id="consumos" name="cuenta" id="cuenta" ></select>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Monto</label>
+                    <input type="number" class="form-control" id="exampleInputPassword1" name="monto">
+                </div>
+                <div class="mb-3 form-check">
+                    <label for="exampleInputPassword1" class="form-label">fecha</label>
+                    <input type="date" name="fecha">
+                </div>
+                    <div></div>
+                    <textarea name="nota"></textarea>
+                    <input type="submit" class="btn btn-primary"></input>
+                    </div>
+            </form>
+            <div id="restando">
+
+            </div>
+        </div>
+    </div>
+        <h2 class="divisor__titulo">gasolina</h2>
+        <div id="gasolina"></div>
+
+        <h2 class="divisor__titulo">Agua</h2>
+        <div id="agua"></div>
+
+        <h2 class="divisor__titulo">Alimento</h2>
+        <div id="alimento"></div>
+
+        <h2 class="divisor__titulo">Seguro Medico</h2>
+        <div id="seguroMedico"></div>
+    <script src="/jsFinal/navegacion.js"></script>
+    <script src="/jsFinal/menu.js"></script>
+    <script src="/jsFinal/datosGastos.js"></script>
+    <script src="/jsFinal/trans.js"></script>
+    <script src="/JsFinal/data.js"></script>
+    <script src="/jsFinal/listGastos.js"></script>
+    <script src="/jsFinal/gastos.js"></script>
+</body>
+
+</html>
